@@ -9,12 +9,21 @@ import {ActivatedRoute, Router} from '@angular/router';
   styleUrls: ['./listagem-diaria.component.css']
 })
 export class ListagemDiariaComponent {
+
   diarias = DIARIAS;
+
   excluir(diariaARemover: Diaria): void {
     const indx = this.diarias.findIndex(diaria =>
       diaria.dataDia === diariaARemover.dataDia);
 
     this.diarias.splice(indx, 1);
   }
+
+  editar(diaria : Diaria) : void {
+    let index : number = this.diarias.findIndex(diariaRemover => diariaRemover.dataDia == diaria.dataDia);
+    this.diarias[index] = diaria;
+  }
+
+  
 
 }

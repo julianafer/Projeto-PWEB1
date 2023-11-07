@@ -9,3 +9,14 @@
   .mat-sucesso {
     background-color: #3abdc2 !important;
   }
+.menu-background{
+  background-color: rgb(145, 250, 168);
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-evenly;
+}
+.titulo{
+  color: rgb(255, 255, 255)!important;
+}
+
