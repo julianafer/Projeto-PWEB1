@@ -11,12 +11,14 @@ import {MatBadgeModule} from '@angular/material/badge';
 import {RouterLink} from '@angular/router';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ListagemDiariaComponent } from './listagem-diaria/listagem-diaria.component';
+import { EstatisticasComponent } from './estatisticas/estatisticas.component';
 
 
 @NgModule({
   declarations: [
     CadastroDiariaComponent,
-    ListagemDiariaComponent
+    ListagemDiariaComponent,
+    EstatisticasComponent
   ],
   exports:[
     CadastroDiariaComponent,

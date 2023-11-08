@@ -7,7 +7,7 @@ import { Diaria } from './shared/modelo/diaria';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'HealthHub';
+  title = 'HealHub';
 
 }
 

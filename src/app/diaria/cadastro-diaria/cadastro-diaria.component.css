@@ -10,6 +10,9 @@ mat-card-content{
     justify-content: space-evenly;
 }
 
+mat-form-field {
+    width: 600px;
+}
 
 button{
     background-color: rgb(0, 172, 115) !important;
