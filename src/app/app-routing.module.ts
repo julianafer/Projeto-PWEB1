@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 // import {MantemUsuarioComponent} from './usuario/mantem-usuario/mantem-usuario.component';
 import { CadastroDiariaComponent } from './diaria/cadastro-diaria/cadastro-diaria.component';
 import { ListagemDiariaComponent } from './diaria/listagem-diaria/listagem-diaria.component';
+import { TabelaDiariaComponent } from './tabela/tabela-diaria/tabela-diaria.component';
 
 const routes: Routes = [
   // {
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path: 'listagemdiaria',
     component: ListagemDiariaComponent
+  },
+  {
+    path: 'tabeladiaria',
+    component: TabelaDiariaComponent
   }
 ];
 

@@ -1,8 +1,9 @@
 <div class="menu-background">
-    <button class="titulo" mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <button class="titulo" mat-button [matMenuTriggerFor]="menu">Opções</button>
     <mat-menu #menu="matMenu">
         <button [routerLink]="['cadastrodiaria']" mat-menu-item>Cadastrar meu dia</button>
         <button [routerLink]="['listagemdiaria']" mat-menu-item>Meu Diário</button>
+        <button [routerLink]="['tabeladiaria']" mat-menu-item>Histórico</button>
     </mat-menu>
     </div>
     

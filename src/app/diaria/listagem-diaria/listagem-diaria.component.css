@@ -1,0 +1,23 @@
+.card-diaria{
+    margin:10px;
+    width: 400px;
+    background-color:rgb(243, 250, 248) ;
+}
+.div-cards{
+    display: flex;
+    flex-wrap: wrap;
+}
+mat-card-actions{
+    display:flex;
+    justify-content: space-around;
+}
+.bEdit{
+    background-color: rgb(0, 172, 115);
+    color:white;
+    text-align: center;
+}
+.bDelet{
+    color:rgb(0, 172, 115);
+    border: 2px solid rgb(0, 172, 115);
+    text-align: center;
+}

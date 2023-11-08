@@ -20,8 +20,10 @@ export class ListagemDiariaComponent {
   }
 
   editar(diaria : Diaria) : void {
-    let index : number = this.diarias.findIndex(diariaRemover => diariaRemover.dataDia == diaria.dataDia);
-    this.diarias[index] = diaria;
+    // const diariaEncontrada = this.diarias.findIndex(diariaRemover => diariaRemover.dataDia == diaria.dataDia);
+    // if (diariaEncontrada) {
+      
+    // }
   }
 
   

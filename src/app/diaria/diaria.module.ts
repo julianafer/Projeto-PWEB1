@@ -18,7 +18,7 @@ import { EstatisticasComponent } from './estatisticas/estatisticas.component';
   declarations: [
     CadastroDiariaComponent,
     ListagemDiariaComponent,
-    EstatisticasComponent
+    EstatisticasComponent,
   ],
   exports:[
     CadastroDiariaComponent,

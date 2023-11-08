@@ -1,4 +1,5 @@
-<mat-card class="card-cadastro">
+<div>
+  <mat-card class="card-cadastro">
     <mat-card-content>
         <mat-form-field appearance="fill">
             <input matInput [(ngModel)]="diariaDeManutencao.dataDia" placeholder="Data">
@@ -13,5 +14,7 @@
     <mat-card-actions>
         <button mat-raised-button color="primary" (click)="manter()">{{nomeBotaoManutencao}}</button>
     </mat-card-actions>
-</mat-card>
-<app-listagem-diaria></app-listagem-diaria>
+  </mat-card>
+  </div>
+
+  <app-listagem-diaria></app-listagem-diaria>
