@@ -8,6 +8,8 @@ mat-card-content{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    background-color: rgb(223, 198, 240);
+    margin-bottom: 15px;
 }
 
 mat-form-field {

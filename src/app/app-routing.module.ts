@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CadastroDiariaComponent } from './diaria/cadastro-diaria/cadastro-diaria.component';
 import { ListagemDiariaComponent } from './diaria/listagem-diaria/listagem-diaria.component';
 import { TabelaDiariaComponent } from './tabela/tabela-diaria/tabela-diaria.component';
+import { EstatisticasComponent } from './diaria/estatisticas/estatisticas.component';
 
 const routes: Routes = [
   // {
@@ -33,6 +34,10 @@ const routes: Routes = [
   {
     path: 'tabeladiaria',
     component: TabelaDiariaComponent
+  },
+  {
+    path: 'estatisticas',
+    component: EstatisticasComponent
   }
 ];
 

@@ -10,10 +10,12 @@ import {MatBadgeModule} from '@angular/material/badge';
 import {MatMenuModule} from '@angular/material/menu';
 import { MenuComponent } from './menu/menu.component';
 import {RouterLink} from '@angular/router';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
-    MenuComponent
+    MenuComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -28,7 +30,8 @@ import {RouterLink} from '@angular/router';
     RouterLink
   ],
   exports: [
-    MenuComponent
+    MenuComponent,
+    FooterComponent
   ]
 })
 export class LayoutModule { }
