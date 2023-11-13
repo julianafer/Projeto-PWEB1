@@ -12,7 +12,7 @@ import { DIARIAS } from 'src/app/shared/modelo/DIARIAS';
   imports: [MatTableModule, MatPaginatorModule],
 })
 export class TabelaDiariaComponent implements AfterViewInit {
-  displayedColumns: string[] = ['posicao', 'titulo', 'dataDia',];
+  displayedColumns: string[] = ['posição', 'titulo', 'dataDia',];
   dataSource = new MatTableDataSource<Diaria>(DIARIAS);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -23,7 +23,7 @@ export class TabelaDiariaComponent implements AfterViewInit {
 }
 
 export interface Diaria {
-  posicao: number;
+  id: number;
   titulo: string;
   dataDia: string;
 }

@@ -4,14 +4,14 @@
 <div class="div-cards" fxLayout="row wrap" fxLayout.lt-sm="roll">
     <mat-card fxFlex="20" class="card-diaria" *ngFor="let diaria of diarias">
         <mat-card-header>
-            <mat-card-title>{{diaria.titulo | titlecase}}</mat-card-title>
-            <mat-card-subtitle>Data: {{diaria.dataDia}}</mat-card-subtitle>
+            <mat-card-title>Dia: {{diaria.dataDia}}</mat-card-title>
         </mat-card-header>
         <mat-card-content>
-            copos de água: {{diaria.coposDAgua}}
+            <p>copos de água: {{diaria.coposDAgua}} <br> estou me sentindo: {{diaria.emocao}}</p>
+            <p>{{diaria.adicional}}</p>
         </mat-card-content>
         <mat-card-actions>
-            <button  class="bDelet" mat-button (click)="excluir(diaria)">
+            <button  class="bDelet" mat-button (click)="remover(diaria)">
                 <mat-icon class="icons-card">delete</mat-icon>
             </button>
             <button class="bEdit" mat-button (click)="editar(diaria)">
@@ -20,4 +20,4 @@
         </mat-card-actions>
     </mat-card>
 </div>
-  
+

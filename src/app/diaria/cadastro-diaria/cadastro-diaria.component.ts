@@ -1,48 +1,47 @@
-import { Component } from '@angular/core';
-import { Diaria } from '../../shared/modelo/diaria';
-import { DIARIAS } from '../../shared/modelo/DIARIAS';
+import {Component, OnInit} from '@angular/core';
+import {Diaria} from '../../shared/modelo/diaria';
+import {DiariaService} from '../../shared/services/diaria.service';
 import {ActivatedRoute, Router} from '@angular/router';
-
 
 @Component({
   selector: 'app-cadastro-diaria',
   templateUrl: './cadastro-diaria.component.html',
-  styleUrls: ['./cadastro-diaria.component.css']
+  styleUrls: ['./cadastro-diaria.component.scss']
 })
-export class CadastroDiariaComponent {
-  diariaDeManutencao: Diaria;
-  estahCadastranda = true;
-  nomeBotaoManutencao = 'Cadastrar';
-  diarias = DIARIAS;
+export class CadastroDiariaComponent implements OnInit {
 
-  constructor(private rotaAtual: ActivatedRoute, private roteador: Router) {
-    this.diariaDeManutencao = new Diaria();
-    const editarDiaria = this.rotaAtual.snapshot.paramMap.get('dataDia');
-    if (editarDiaria) {
+  diaria: Diaria;
 
-      const diariaEncontrada = this.diarias.find(
-        diaria => diaria.dataDia === editarDiaria);
-      if (diariaEncontrada) {
-        this.estahCadastranda = false;
-        this.nomeBotaoManutencao = 'Salvar';
-        this.diariaDeManutencao = diariaEncontrada;
-      }
+  operacaoCadastro = true;
+
+  constructor(private diariaService: DiariaService, private rotalAtual: ActivatedRoute, private roteador: Router) {
+    this.diaria = new Diaria();
+    if (this.rotalAtual.snapshot.paramMap.has('id')) {
+      this.operacaoCadastro = false;
+      const idParaEdicao = Number(this.rotalAtual.snapshot.paramMap.get('id'));
+      // pegar do banco usuario id=idParaEdicao
+      this.diariaService.pesquisarPorId(idParaEdicao).subscribe(
+        diariaRetornada => this.diaria = diariaRetornada
+      );
+    }
+  }
+
+  ngOnInit(): void {
+  }
+
+  inserirDiaria(): void {
+    if (this.diaria.id) {
+      this.diariaService.atualizar(this.diaria).subscribe(
+        diariaAlterado => {
+          this.roteador.navigate(['listardiarias']);
+        }
+      );
     } else {
-      this.nomeBotaoManutencao = 'Cadastrar';
+      this.usuarioService.inserir(this.usuario).subscribe(
+        diariaInserida => {
+          this.roteador.navigate(['listardiarias']);
+        }
+      );
     }
   }
-
-  manter(): void {
-    
-    if (this.estahCadastranda && this.diariaDeManutencao) {
-      const maxPosicao = this.diarias.reduce((max, diaria) => (diaria.posicao > max ? diaria.posicao : max), 0);
-      this.diariaDeManutencao.posicao = maxPosicao + 1;
-      this.diarias.push(this.diariaDeManutencao);
-  }
-    this.diariaDeManutencao = new Diaria();
-    
-    this.nomeBotaoManutencao = 'Cadastrar';
-    this.roteador.navigate(['listagemdiaria']);
-    }
-
 }

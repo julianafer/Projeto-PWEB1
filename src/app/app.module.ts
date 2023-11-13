@@ -14,10 +14,12 @@ import {MatBadgeModule} from '@angular/material/badge';
 import {MatMenuModule} from '@angular/material/menu';
 import {LayoutModule} from './layout/layout.module';
 import { DiariaModule } from './diaria/diaria.module';
+import { DiariaServiceComponent } from './services/diaria.service/diaria.service.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DiariaServiceComponent
   ],
   imports: [
     BrowserModule,

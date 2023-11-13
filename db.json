@@ -1,0 +1,22 @@
+{
+    "diarias": [
+        {
+            "id": 1,
+            "dataDia": "20/10/2023",
+            "titulo": "Meu primeiro dia de aula",
+            "emocao": "feliz",
+            "coposDAgua": "nenhum",
+            "exercicios": "caminhada 20 min",
+            "adicional": "Estudos em dia"
+          },
+          {
+            "id": 2,
+            "dataDia": "21/10/2023",
+            "titulo": "Fiz amigos novos",
+            "emocao": "feliz",
+            "coposDAgua": "3",
+            "exercicios": "caminhada 20 min",
+            "adicional": "social em dia"
+          }
+    ]
+}
