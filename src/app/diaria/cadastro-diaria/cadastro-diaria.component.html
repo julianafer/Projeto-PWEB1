@@ -2,19 +2,17 @@
     <mat-card class="card-cadastro">
         <mat-card-content>
             <mat-form-field appearance="fill">
-                <input matInput [(ngModel)]="diariaDeManutencao.dataDia" placeholder="Data">
+                <input matInput [(ngModel)]="diaria.dataDia" placeholder="Data">
             </mat-form-field>
             <mat-form-field appearance="fill">
-                <input matInput [(ngModel)]="diariaDeManutencao.titulo" placeholder="Escreva o título do dia">
+                <input matInput [(ngModel)]="diaria.titulo" placeholder="Escreva o título do dia">
             </mat-form-field>
             <mat-form-field appearance="fill">
-                <input matInput [(ngModel)]="diariaDeManutencao.emocao" placeholder="Escreva como foi o dia">
+                <input matInput [(ngModel)]="diaria.emocao" placeholder="Escreva como foi o dia">
             </mat-form-field>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-raised-button color="primary" (click)="inserirDiaria()">Cadastrar</button>
+            <button mat-raised-button color="primary" (click)="inserirDiaria()" [routerLink]="['listagemdiaria']">Cadastrar</button>
         </mat-card-actions>
     </mat-card>
 </div>
-
-<app-listagem-diaria></app-listagem-diaria>

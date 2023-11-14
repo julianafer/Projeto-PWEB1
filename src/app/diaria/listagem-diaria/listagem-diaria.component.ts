@@ -6,11 +6,11 @@ import {Router} from '@angular/router';
 @Component({
   selector: 'app-listagem-diaria',
   templateUrl: './listagem-diaria.component.html',
-  styleUrls: ['./listagem-diaria.component.scss']
+  styleUrls: ['./listagem-diaria.component.css']
 })
 export class ListagemDiariaComponent implements OnInit {
 
-  diarias: Array<Diaria>;
+  diarias: Array<Diaria> = [];
 
   constructor(private diariaService: DiariaService, private roteador: Router) {
   }

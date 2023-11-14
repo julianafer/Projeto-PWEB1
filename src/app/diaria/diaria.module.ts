@@ -13,6 +13,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ListagemDiariaComponent } from './listagem-diaria/listagem-diaria.component';
 import { EstatisticasComponent } from './estatisticas/estatisticas.component';
 import {FlexLayoutModule} from "@angular/flex-layout";
+import { ModalComponent } from '../modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import {FlexLayoutModule} from "@angular/flex-layout";
     MatBadgeModule,
     RouterLink,
     FlexLayoutModule,
+    ModalComponent,
   ]
 })
 export class DiariaModule { }

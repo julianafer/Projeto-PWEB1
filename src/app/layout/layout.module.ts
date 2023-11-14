@@ -8,9 +8,11 @@ import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatMenuModule} from '@angular/material/menu';
-import { MenuComponent } from './menu/menu.component';
+import {MenuComponent} from './menu/menu.component';
 import {RouterLink} from '@angular/router';
-import { FooterComponent } from './footer/footer.component';
+import {FooterComponent} from './footer/footer.component';
+import { DiariaModule } from '../diaria/diaria.module';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { FooterComponent } from './footer/footer.component';
     MatIconModule,
     MatBadgeModule,
     MatMenuModule,
-    RouterLink
+    RouterLink,
+    DiariaModule
   ],
   exports: [
     MenuComponent,

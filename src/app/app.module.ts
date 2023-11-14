@@ -14,12 +14,14 @@ import {MatBadgeModule} from '@angular/material/badge';
 import {MatMenuModule} from '@angular/material/menu';
 import {LayoutModule} from './layout/layout.module';
 import { DiariaModule } from './diaria/diaria.module';
-import { DiariaServiceComponent } from './services/diaria.service/diaria.service.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DiariaServiceComponent
+    ModalComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -35,6 +37,8 @@ import { DiariaServiceComponent } from './services/diaria.service/diaria.service
     MatMenuModule,
     LayoutModule,
     DiariaModule,
+    HttpClientModule,
+    
 
   ],
   providers: [],
