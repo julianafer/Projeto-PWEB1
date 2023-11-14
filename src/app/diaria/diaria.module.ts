@@ -13,13 +13,15 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ListagemDiariaComponent } from './listagem-diaria/listagem-diaria.component';
 import { EstatisticasComponent } from './estatisticas/estatisticas.component';
 import {FlexLayoutModule} from "@angular/flex-layout";
-import { ModalComponent } from '../modal/modal.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { SnackBarComponent } from './snack-bar/snack-bar.component';
 
 @NgModule({
   declarations: [
     CadastroDiariaComponent,
     ListagemDiariaComponent,
     EstatisticasComponent,
+    SnackBarComponent,
   ],
   exports:[
     CadastroDiariaComponent,
@@ -37,7 +39,7 @@ import { ModalComponent } from '../modal/modal.component';
     MatBadgeModule,
     RouterLink,
     FlexLayoutModule,
-    ModalComponent,
+    MatSnackBarModule,
   ]
 })
 export class DiariaModule { }

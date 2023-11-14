@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {FormsModule} from '@angular/forms';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
@@ -12,16 +12,14 @@ import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatMenuModule} from '@angular/material/menu';
+
 import {LayoutModule} from './layout/layout.module';
 import { DiariaModule } from './diaria/diaria.module';
 import { HttpClientModule } from '@angular/common/http';
-import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ModalComponent,
-
   ],
   imports: [
     BrowserModule,
@@ -38,8 +36,6 @@ import { ModalComponent } from './modal/modal.component';
     LayoutModule,
     DiariaModule,
     HttpClientModule,
-    
-
   ],
   providers: [],
   bootstrap: [AppComponent]

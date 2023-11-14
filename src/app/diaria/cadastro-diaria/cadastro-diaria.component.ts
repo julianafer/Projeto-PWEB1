@@ -2,9 +2,10 @@ import {Component, OnInit} from '@angular/core';
 import {Diaria} from '../../shared/modelo/diaria';
 import {DiariaService} from '../../shared/services/diaria.service';
 import {ActivatedRoute, Router} from '@angular/router';
-import { ModalComponent } from 'src/app/modal/modal.component';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { SnackBarComponent } from '../snack-bar/snack-bar.component';
 //matdialog
-import { MatDialog } from '@angular/material/dialog';
+// import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-cadastro-diaria',
@@ -14,10 +15,11 @@ import { MatDialog } from '@angular/material/dialog';
 export class CadastroDiariaComponent implements OnInit {
 
   diaria: Diaria;
+  durationInSeconds: number = 5;
 
   operacaoCadastro = true;
 //private dialog: MatDialog
-  constructor(private dialog: MatDialog, private diariaService: DiariaService, private rotalAtual: ActivatedRoute, private roteador: Router){
+  constructor( private _snackBar: MatSnackBar, private diariaService: DiariaService, private rotalAtual: ActivatedRoute, private roteador: Router){
     this.diaria = new Diaria();
     if (this.rotalAtual.snapshot.paramMap.has('id')) {
       this.operacaoCadastro = false;
@@ -37,7 +39,10 @@ export class CadastroDiariaComponent implements OnInit {
       this.diariaService.atualizar(this.diaria).subscribe(
         diariaAlterado => {
           //alert()
-          this.abrirModal('Criado com sucesso!', 'Criado som sucesso!');
+          // this.abrirModal('Criado com sucesso!', 'Criado som sucesso!');
+          this._snackBar.openFromComponent(SnackBarComponent, {
+            duration: this.durationInSeconds * 1000,
+          });
           this.roteador.navigate(['listardiarias']);
         }
       );
@@ -45,17 +50,20 @@ export class CadastroDiariaComponent implements OnInit {
       this.diariaService.inserir(this.diaria).subscribe(
         diariaInserida => {
           //alert()
-          this.abrirModal('Criado com sucesso!', 'Criado som sucesso!');
+          // this.abrirModal('Criado com sucesso!', 'Criado som sucesso!');
+          this._snackBar.openFromComponent(SnackBarComponent, {
+            duration: this.durationInSeconds * 1000,
+          });
           this.roteador.navigate(['listardiarias']);
         }
       );
     }
   }
 //abrirModal
-  abrirModal(titulo: string, mensagem: string): void {
-    this.dialog.open(ModalComponent, {
-      width: '400px',
-      data: { titulo, mensagem }
-    });
-  }
+//   abrirModal(titulo: string, mensagem: string): void {
+//     this.dialog.open(ModalComponent, {
+//       width: '400px',
+//       data: { titulo, mensagem }
+//     });
+//   }
 }
