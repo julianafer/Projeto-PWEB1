@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 // import {MantemUsuarioComponent} from './usuario/mantem-usuario/mantem-usuario.component';
 import { CadastroDiariaComponent } from './diaria/cadastro-diaria/cadastro-diaria.component';
 import { ListagemDiariaComponent } from './diaria/listagem-diaria/listagem-diaria.component';
-import { TabelaDiariaComponent } from './tabela/tabela-diaria/tabela-diaria.component';
+import { TabelaComponent } from './diaria/tabela/tabela.component';
 import { EstatisticasComponent } from './diaria/estatisticas/estatisticas.component';
 
 const routes: Routes = [
@@ -24,7 +24,7 @@ const routes: Routes = [
     component: CadastroDiariaComponent
   },
   {
-    path: 'editadiaria/:dataDia',
+    path: 'editadiaria/:id',
     component: CadastroDiariaComponent
   },
   {
@@ -33,7 +33,7 @@ const routes: Routes = [
   },
   {
     path: 'tabeladiaria',
-    component: TabelaDiariaComponent
+    component: TabelaComponent
   },
   {
     path: 'estatisticas',

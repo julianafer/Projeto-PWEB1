@@ -22,7 +22,7 @@ export class ListagemDiariaComponent implements OnInit {
   }
 
   editar(diaria: Diaria): void {
-    this.roteador.navigate(['cadastrardiaria', diaria.id]);
+    this.roteador.navigate(['editadiaria', diaria.id]);
   }
 
   remover(diaria: Diaria): void {

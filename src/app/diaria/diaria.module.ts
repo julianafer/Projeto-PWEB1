@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { CadastroDiariaComponent } from './cadastro-diaria/cadastro-diaria.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
@@ -14,7 +15,14 @@ import { ListagemDiariaComponent } from './listagem-diaria/listagem-diaria.compo
 import { EstatisticasComponent } from './estatisticas/estatisticas.component';
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 import { SnackBarComponent } from './snack-bar/snack-bar.component';
+import { TabelaComponent } from './tabela/tabela.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableModule } from '@angular/material/table';
+
+
+
 
 @NgModule({
   declarations: [
@@ -22,6 +30,8 @@ import { SnackBarComponent } from './snack-bar/snack-bar.component';
     ListagemDiariaComponent,
     EstatisticasComponent,
     SnackBarComponent,
+    TabelaComponent,
+
   ],
   exports:[
     CadastroDiariaComponent,
@@ -40,6 +50,10 @@ import { SnackBarComponent } from './snack-bar/snack-bar.component';
     RouterLink,
     FlexLayoutModule,
     MatSnackBarModule,
+    MatPaginatorModule,
+    MatTableModule,
+
+
   ]
 })
 export class DiariaModule { }
