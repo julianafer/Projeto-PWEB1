@@ -1,19 +1,19 @@
 <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource">
   
-      <!-- Position Column -->
+      <!-- Posição Column -->
       <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef> No. </th>
         <td mat-cell *matCellDef="let element"> {{element.id}} </td>
       </ng-container>
   
-      <!-- Name Column -->
+      <!-- Data Column -->
       <ng-container matColumnDef="dataDia">
         <th mat-header-cell *matHeaderCellDef> Data </th>
         <td mat-cell *matCellDef="let element"> {{element.dataDia}} </td>
       </ng-container>
   
-      <!-- Weight Column -->
+      <!-- copos Column -->
       <ng-container matColumnDef="coposDAgua">
         <th mat-header-cell *matHeaderCellDef> Copos de água </th>
         <td mat-cell *matCellDef="let element"> {{element.coposDAgua}} </td>
