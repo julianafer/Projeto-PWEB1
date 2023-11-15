@@ -1,0 +1,54 @@
+.div-login {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background: rgb(223,198,240);
+    background: linear-gradient(90deg, rgba(223,198,240,1) 0%, rgba(194,145,250,1) 30%, rgba(145,250,168,1) 100%);
+}
+
+.card-login {
+    width: 40%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.content-login {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.h1-login {
+    color: #9520e4;
+    font-size: 40px;
+    letter-spacing: 3px;
+}
+
+.p-login {
+    background-color: #9520e4;
+    width: 250px;
+    height: 2.5px;
+    margin-bottom: 40px;
+}
+
+.field-login {
+    width: 400px;
+}
+
+.button-login {
+    width: 120px;
+    margin: 10px;
+    background-color: #9520e4 !important;
+    color: white !important;
+}

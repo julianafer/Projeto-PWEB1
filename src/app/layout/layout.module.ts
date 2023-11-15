@@ -12,12 +12,16 @@ import {MenuComponent} from './menu/menu.component';
 import {RouterLink} from '@angular/router';
 import {FooterComponent} from './footer/footer.component';
 import { DiariaModule } from '../diaria/diaria.module';
+import { HeaderComponent } from './header/header.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
   declarations: [
     MenuComponent,
-    FooterComponent
+    FooterComponent,
+    HeaderComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,
@@ -34,7 +38,9 @@ import { DiariaModule } from '../diaria/diaria.module';
   ],
   exports: [
     MenuComponent,
-    FooterComponent
+    FooterComponent,
+    HeaderComponent,
+    LoginComponent
   ]
 })
 export class LayoutModule { }
