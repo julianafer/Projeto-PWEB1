@@ -22,6 +22,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { DecorationsModule } from '../decorations/decorations.module';
 
+import { InicioComponent } from './inicio/inicio.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+
 @NgModule({
   declarations: [
     CadastroDiariaComponent,
@@ -29,11 +32,13 @@ import { DecorationsModule } from '../decorations/decorations.module';
     EstatisticasComponent,
     SnackBarComponent,
     TabelaComponent,
+    InicioComponent,
 
   ],
   exports:[
     CadastroDiariaComponent,
-    ListagemDiariaComponent
+    ListagemDiariaComponent,
+    InicioComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -50,7 +55,8 @@ import { DecorationsModule } from '../decorations/decorations.module';
     MatSnackBarModule,
     MatPaginatorModule,
     MatTableModule,
-    DecorationsModule
+    DecorationsModule,
+    MatGridListModule
   ]
 })
 export class DiariaModule { }

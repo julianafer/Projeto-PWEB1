@@ -1,0 +1,12 @@
+
+<mat-card>
+<mat-grid-list cols="4" rowHeight="100px">
+    <mat-grid-tile *ngFor="let tile of tiles; trackBy: trackTile" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
+        <h2>{{tile.title}}</h2>
+      {{tile.text}}
+    </mat-grid-tile>
+</mat-grid-list>
+</mat-card>
+  
+
+  

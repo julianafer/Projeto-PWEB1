@@ -7,6 +7,7 @@ import { TabelaComponent } from './diaria/tabela/tabela.component';
 import { EstatisticasComponent } from './diaria/estatisticas/estatisticas.component';
 import { TelaPrincipalComponent } from './layout/tela-principal/tela-principal.component';
 import { LoginComponent } from './layout/login/login.component';
+import { InicioComponent } from './diaria/inicio/inicio.component';
 
 const routes: Routes = [
   {
