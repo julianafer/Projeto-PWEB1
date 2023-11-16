@@ -20,9 +20,7 @@ import { SnackBarComponent } from './snack-bar/snack-bar.component';
 import { TabelaComponent } from './tabela/tabela.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
-
-
-
+import { DecorationsModule } from '../decorations/decorations.module';
 
 @NgModule({
   declarations: [
@@ -52,8 +50,7 @@ import { MatTableModule } from '@angular/material/table';
     MatSnackBarModule,
     MatPaginatorModule,
     MatTableModule,
-
-
+    DecorationsModule
   ]
 })
 export class DiariaModule { }

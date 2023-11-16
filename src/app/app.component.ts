@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Diaria } from './shared/modelo/diaria';
 
 @Component({
   selector: 'app-root',

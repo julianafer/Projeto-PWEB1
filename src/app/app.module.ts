@@ -16,10 +16,11 @@ import {MatMenuModule} from '@angular/material/menu';
 import {LayoutModule} from './layout/layout.module';
 import { DiariaModule } from './diaria/diaria.module';
 import { HttpClientModule } from '@angular/common/http';
+import { DecorationsModule } from './decorations/decorations.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -36,6 +37,7 @@ import { HttpClientModule } from '@angular/common/http';
     LayoutModule,
     DiariaModule,
     HttpClientModule,
+    DecorationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,27 +5,37 @@ import { CadastroDiariaComponent } from './diaria/cadastro-diaria/cadastro-diari
 import { ListagemDiariaComponent } from './diaria/listagem-diaria/listagem-diaria.component';
 import { TabelaComponent } from './diaria/tabela/tabela.component';
 import { EstatisticasComponent } from './diaria/estatisticas/estatisticas.component';
+import { TelaPrincipalComponent } from './layout/tela-principal/tela-principal.component';
+import { LoginComponent } from './layout/login/login.component';
 
 const routes: Routes = [
   {
-    path: 'cadastrodiaria',
+    path: 'telaprincipal/cadastrodiaria',
     component: CadastroDiariaComponent
   },
   {
-    path: 'editadiaria/:id',
+    path: 'telaprincipal/editadiaria/:id',
     component: CadastroDiariaComponent
   },
   {
-    path: 'listagemdiaria',
+    path: 'telaprincipal/listagemdiaria',
     component: ListagemDiariaComponent
   },
   {
-    path: 'tabeladiaria',
+    path: 'telaprincipal/tabeladiaria',
     component: TabelaComponent
   },
   {
-    path: 'estatisticas',
+    path: 'telaprincipal/estatisticas',
     component: EstatisticasComponent
+  },
+  {
+    path: 'telaprincipal',
+    component: TelaPrincipalComponent
+  },
+  {
+    path: '',
+    component: LoginComponent
   }
 ];
 
