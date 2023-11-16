@@ -31,6 +31,22 @@
       "coposDAgua": "nenhum",
       "exercicios": "corrida",
       "adicional": ""
+    },
+    {
+      "id": 5,
+      "dataDia": "13/03/2024",
+      "emocao": "normal",
+      "coposDAgua": "nenhum",
+      "exercicios": "corrida",
+      "adicional": "tomei vitâmina"
+    },
+    {
+      "id": 6,
+      "dataDia": "14/03/2024",
+      "emocao": "bem",
+      "coposDAgua": "nenhum",
+      "exercicios": "vôlei",
+      "adicional": "estudei"
     }
   ]
 }

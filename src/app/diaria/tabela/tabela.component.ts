@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./tabela.component.css']
 })
 export class TabelaComponent implements AfterViewInit {
-  displayedColumns: string[] = ['id', 'dataDia', 'coposDAgua'];
+  displayedColumns: string[] = ['id', 'dataDia', 'coposDAgua', 'exercicios'];
   dataSource = new MatTableDataSource<Diaria>();
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -37,6 +37,7 @@ export interface Diaria {
   id: number;
   dataDia: string;
   coposDAgua: string;
+  exercicios: string;
 }
 
 

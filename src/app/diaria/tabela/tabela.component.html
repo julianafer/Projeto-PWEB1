@@ -20,6 +20,12 @@
         <th mat-header-cell *matHeaderCellDef> Copos de água </th>
         <td mat-cell *matCellDef="let element"> {{element.coposDAgua}} </td>
       </ng-container>
+
+      <!-- exercicios Column -->
+      <ng-container matColumnDef="exercicios">
+        <th mat-header-cell *matHeaderCellDef> Exercício do dia </th>
+        <td mat-cell *matCellDef="let element"> {{element.exercicios}} </td>
+      </ng-container>
   
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
