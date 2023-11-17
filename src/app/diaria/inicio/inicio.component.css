@@ -1,0 +1,79 @@
+.div-inicio {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
+.card-inicio {
+    margin: 5px;
+    border-radius: 20px;
+}
+
+.img-inicio {
+    width: 20%;
+    border-radius: 20px;
+}
+
+img {
+    border-radius: 20px;
+}
+
+#div1 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#div2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 50%;
+}
+
+#titulo-inicio {
+    height: 50%;
+    background-color: rgb(121, 27, 184);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 50px;
+}
+
+h1 {
+    letter-spacing: 3px;
+    font-size: 40px;
+    margin-bottom: 0;
+}
+
+mat-icon {
+    margin-left: 20px;
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+
+#meta1, #meta2 {
+    width: 50%;
+    padding: 20px;
+}
+
+#meta1 {
+    background-color: #91faa8;
+}
+
+#meta2 {
+    background-color: #dfc6f0;
+}
+
+mat-progress-bar {
+    padding-bottom: 15px;
+}

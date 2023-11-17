@@ -1,12 +1,26 @@
-
-<mat-card>
-<mat-grid-list cols="4" rowHeight="100px">
-    <mat-grid-tile *ngFor="let tile of tiles; trackBy: trackTile" [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color">
-        <h2>{{tile.title}}</h2>
-      {{tile.text}}
-    </mat-grid-tile>
-</mat-grid-list>
-</mat-card>
-  
-
-  
+<div class="div-inicio">
+    <mat-card class="card-inicio img-inicio">
+        <img src="./assets/imgs/agua.jpeg">
+    </mat-card>
+    <div id="div1">
+        <mat-card class="card-inicio" id="titulo-inicio">
+            <h1>Metas diárias</h1>
+            <mat-icon>medical_information</mat-icon>
+        </mat-card>
+        <div id="div2">
+            <mat-card class="card-inicio" id="meta1">
+                <h2>Copos de água</h2>
+                <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+                <p>3/7</p>
+            </mat-card>
+            <mat-card class="card-inicio" id="meta2">
+                <h2>Metros percorridos</h2>
+                <mat-progress-bar mode="determinate" value="70"></mat-progress-bar>
+                <p>70/100</p>
+            </mat-card>
+        </div>
+    </div>
+    <mat-card class="card-inicio img-inicio">
+        <img src="./assets/imgs/corrida.jpeg">
+    </mat-card>
+</div>
