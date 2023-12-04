@@ -7,6 +7,8 @@ import { TabelaComponent } from './diaria/tabela/tabela.component';
 import { EstatisticasComponent } from './diaria/estatisticas/estatisticas.component';
 import { TelaPrincipalComponent } from './layout/tela-principal/tela-principal.component';
 import { LoginComponent } from './layout/login/login.component';
+import { CadastroUsuarioComponent } from './usuario/cadastro-usuario/cadastro-usuario.component';
+import { TelaCadastroUsuarioComponent } from './layout/tela-cadastro-usuario/tela-cadastro-usuario.component';
 
 const routes: Routes = [
   {
@@ -32,6 +34,14 @@ const routes: Routes = [
   {
     path: 'telaprincipal',
     component: TelaPrincipalComponent
+  },
+  {
+    path: 'cadastrousuario',
+    component: CadastroUsuarioComponent
+  },
+  {
+    path: 'telacadastrousuario',
+    component: TelaCadastroUsuarioComponent
   },
   {
     path: '',
