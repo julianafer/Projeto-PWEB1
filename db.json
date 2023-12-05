@@ -9,14 +9,6 @@
       "adicional": "Estudos em dia"
     },
     {
-      "id": 2,
-      "dataDia": "21/10/2023",
-      "emocao": "feliz",
-      "coposDAgua": "3",
-      "exercicios": "caminhada 20 min",
-      "adicional": "social em dia"
-    },
-    {
       "id": 3,
       "dataDia": "20/10/2023",
       "emocao": "bem",
@@ -26,10 +18,10 @@
     },
     {
       "id": 4,
-      "dataDia": "12/03/2024",
-      "emocao": "bem",
-      "coposDAgua": "nenhum",
-      "exercicios": "corrida",
+      "dataDia": "20/10/2003",
+      "emocao": "Feliz",
+      "coposDAgua": "4",
+      "exercicios": "correr",
       "adicional": ""
     },
     {
@@ -47,6 +39,24 @@
       "coposDAgua": "nenhum",
       "exercicios": "vôlei",
       "adicional": "estudei"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "user": "Bernardo",
+      "senha": "BBardo1203",
+      "phone": "03958493",
+      "email": "Bernardo@gmail.com",
+      "foto": ""
+    },
+    {
+      "id": 2,
+      "user": "Bela",
+      "senha": "BBardo1203",
+      "phone": "0395849303",
+      "email": "Bero@gmail.com",
+      "foto": ""
     }
   ]
 }

@@ -40,7 +40,7 @@ export class CadastroDiariaComponent implements OnInit {
           this._snackBar.openFromComponent(SnackBarComponent, {
             duration: this.durationInSeconds * 1000,
           });
-          this.roteador.navigate(['listagemiaria']);
+          this.roteador.navigate(['telaprincipal/listagemdiaria']);
         }
       );
     } else {
@@ -49,7 +49,7 @@ export class CadastroDiariaComponent implements OnInit {
           this._snackBar.openFromComponent(SnackBarComponent, {
             duration: this.durationInSeconds * 1000,
           });
-          this.roteador.navigate(['listagemdiaria']);
+          this.roteador.navigate(['telaprincipal/listagemdiaria']);
         }
       );
     }
