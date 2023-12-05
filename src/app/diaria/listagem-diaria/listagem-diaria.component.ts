@@ -1,7 +1,9 @@
+
 import {Component, OnInit} from '@angular/core';
 import {Diaria} from "../../shared/modelo/diaria";
 import {DiariaService} from '../../shared/services/diaria.service';
 import {Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-listagem-diaria',

@@ -1,3 +1,4 @@
+
 import {Component, OnInit} from '@angular/core';
 import {Diaria} from '../../shared/modelo/diaria';
 import {DiariaService} from '../../shared/services/diaria.service';
@@ -11,6 +12,7 @@ import { SnackBarComponent } from '../snack-bar/snack-bar.component';
   templateUrl: './cadastro-diaria.component.html',
   styleUrls: ['./cadastro-diaria.component.css']
 })
+
 export class CadastroDiariaComponent implements OnInit {
 
   diaria: Diaria;
@@ -55,3 +57,4 @@ export class CadastroDiariaComponent implements OnInit {
     }
   }
 }
+

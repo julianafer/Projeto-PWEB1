@@ -1,3 +1,4 @@
+
 import {Injectable} from '@angular/core';
 import {Diaria} from '../modelo/diaria';
 import {HttpClient} from '@angular/common/http';
@@ -7,6 +8,7 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class DiariaService {
+
 
   URL_DIARIAS = 'http://localhost:3000/diarias';
 
