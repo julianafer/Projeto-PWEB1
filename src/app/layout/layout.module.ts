@@ -15,11 +15,14 @@ import { TelaPrincipalComponent } from './tela-principal/tela-principal.componen
 import { AppRoutingModule } from '../app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { DecorationsModule } from '../decorations/decorations.module';
+import { TelaCadastroUsuarioComponent } from './tela-cadastro-usuario/tela-cadastro-usuario.component';
+import { CadastroUsuarioComponent } from '../usuario/cadastro-usuario/cadastro-usuario.component';
 
 @NgModule({
   declarations: [
     LoginComponent,
-    TelaPrincipalComponent
+    TelaPrincipalComponent,
+    TelaCadastroUsuarioComponent
   ],
   imports: [
     CommonModule,
@@ -35,7 +38,8 @@ import { DecorationsModule } from '../decorations/decorations.module';
     DiariaModule,
     AppRoutingModule,
     FormsModule,
-    DecorationsModule
+    DecorationsModule,
+    CadastroUsuarioComponent
   ],
   exports: [
     LoginComponent,
