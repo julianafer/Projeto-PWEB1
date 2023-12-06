@@ -37,7 +37,7 @@ import { DecorationsModule } from './decorations/decorations.module';
     LayoutModule,
     DiariaModule,
     HttpClientModule,
-    DecorationsModule
+    DecorationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

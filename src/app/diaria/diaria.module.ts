@@ -12,7 +12,6 @@ import {MatBadgeModule} from '@angular/material/badge';
 import {RouterLink} from '@angular/router';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ListagemDiariaComponent } from './listagem-diaria/listagem-diaria.component';
-import { EstatisticasComponent } from './estatisticas/estatisticas.component';
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 
@@ -25,12 +24,14 @@ import { DecorationsModule } from '../decorations/decorations.module';
 import { InicioComponent } from './inicio/inicio.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { DiariaService } from '../shared/services/diaria.service';
+
+import { FirestoreModule } from '../firestore/firestore.module';
 
 @NgModule({
   declarations: [
     CadastroDiariaComponent,
     ListagemDiariaComponent,
-    EstatisticasComponent,
     SnackBarComponent,
     TabelaComponent,
     InicioComponent,
@@ -58,7 +59,11 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     MatTableModule,
     DecorationsModule,
     MatGridListModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    FirestoreModule
+  ],
+  providers: [
+    DiariaService
   ]
 })
 export class DiariaModule { }

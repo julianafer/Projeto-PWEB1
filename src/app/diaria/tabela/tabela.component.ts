@@ -1,7 +1,7 @@
 import { Component, AfterViewInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { HttpClient } from '@angular/common/http';
+import { DiariaService } from 'src/app/shared/services/diaria.service';
 
 @Component({
   selector: 'app-tabela',
@@ -14,7 +14,7 @@ export class TabelaComponent implements AfterViewInit {
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
-  constructor(private http: HttpClient) { }
+  constructor(private diariaService: DiariaService) { }
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
@@ -22,7 +22,7 @@ export class TabelaComponent implements AfterViewInit {
   }
 
   carregarDadosDoServidor() {
-    this.http.get<Diaria[]>('http://localhost:3000/diarias').subscribe(
+    this.diariaService.listar().subscribe(
       data => {
         this.dataSource.data = data;
       },
@@ -34,7 +34,7 @@ export class TabelaComponent implements AfterViewInit {
 }
 
 export interface Diaria {
-  id: number;
+  id?: string;
   dataDia: string;
   coposDAgua: string;
   exercicios: string;
