@@ -1,7 +1,7 @@
 <app-header></app-header>
 <app-menu></app-menu>
 <div>
-    <mat-icon [matBadge]="diarias.length" matBadgeColor="primary">assignment</mat-icon>
+    <mat-icon [matBadge]="diarias.length" aria-hidden="false" matBadgeColor="primary">assignment</mat-icon>
 </div>
 <div class="div-cards" fxLayout="row wrap" fxLayout.lt-sm="roll">
     <mat-card fxFlex="20" class="card-diaria" *ngFor="let diaria of diarias">
@@ -14,10 +14,10 @@
         </mat-card-content>
         <mat-card-actions>
             <button  class="bDelet" mat-button (click)="remover(diaria)">
-                <mat-icon class="icons-card">delete</mat-icon>
+                <mat-icon aria-hidden="false" class="icons-card">delete</mat-icon>
             </button>
             <button class="bEdit" mat-button (click)="editar(diaria)">
-                <mat-icon class="icons-card">create</mat-icon>
+                <mat-icon aria-hidden="false" class="icons-card">create</mat-icon>
             </button>
         </mat-card-actions>
     </mat-card>

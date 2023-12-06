@@ -15,6 +15,7 @@ export class CadastroDiariaComponent implements OnInit {
 
   diaria: Diaria;
   durationInSeconds: number = 5;
+  botaonome: string = 'Cadastrar';
 
   operacaoCadastro = true;
 
@@ -22,6 +23,7 @@ export class CadastroDiariaComponent implements OnInit {
     this.diaria = new Diaria();
     if (this.rotalAtual.snapshot.paramMap.has('id')) {
       this.operacaoCadastro = false;
+      this.botaonome = 'Editar';
       const idParaEdicao = String(this.rotalAtual.snapshot.paramMap.get('id'));
 
       this.diariaService.pesquisarPorId(idParaEdicao).subscribe(
@@ -40,18 +42,18 @@ export class CadastroDiariaComponent implements OnInit {
           this._snackBar.openFromComponent(SnackBarComponent, {
             duration: this.durationInSeconds * 1000,
           });
-          this.roteador.navigate(['listagemiaria']);
         }
       );
     } else {
+      
       this.diariaService.inserir(this.diaria).subscribe(
         diariaInserida => {
           this._snackBar.openFromComponent(SnackBarComponent, {
             duration: this.durationInSeconds * 1000,
           });
-          this.roteador.navigate(['listagemdiaria']);
         }
       );
+      
     }
   }
 }

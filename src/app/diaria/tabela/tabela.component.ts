@@ -9,7 +9,7 @@ import { DiariaService } from 'src/app/shared/services/diaria.service';
   styleUrls: ['./tabela.component.css']
 })
 export class TabelaComponent implements AfterViewInit {
-  displayedColumns: string[] = ['id', 'dataDia', 'coposDAgua', 'exercicios'];
+  displayedColumns: string[] = ['dataDia', 'coposDAgua', 'exercicios'];
   dataSource = new MatTableDataSource<Diaria>();
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
