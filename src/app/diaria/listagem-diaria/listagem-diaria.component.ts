@@ -26,15 +26,19 @@ export class ListagemDiariaComponent implements OnInit {
   }
 
   remover(diaria: Diaria): void {
-    this.diariaService.remover(diaria.id).subscribe(
-      resposta => {
-        const indxDiariaARemover = this.diarias.findIndex(d => d.id === diaria.id);
-        if (indxDiariaARemover > -1) {
-          this.diarias.splice(indxDiariaARemover, 1);
+    const id = diaria.id;
+    if (id) {
+      this.diariaService.remover(id).subscribe(
+        resposta => {
+          const indxDiariaARemover = this.diarias.findIndex(d => d.id === id);
+          if (indxDiariaARemover > -1) {
+            this.diarias.splice(indxDiariaARemover, 1);
+          }
         }
-      }
-    );
-
+      );
+    } else {
+      console.error('ID da diária é indefinido.');
+    }
   }
 
 }

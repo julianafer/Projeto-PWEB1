@@ -1,6 +1,6 @@
 export class Diaria {
 
-  id: string = '';
+  id?: string = '';
   dataDia: string = '';
   emocao: string = '';
   coposDAgua: string = '';

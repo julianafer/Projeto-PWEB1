@@ -22,7 +22,7 @@ export class CadastroDiariaComponent implements OnInit {
     this.diaria = new Diaria();
     if (this.rotalAtual.snapshot.paramMap.has('id')) {
       this.operacaoCadastro = false;
-      const idParaEdicao = Number(this.rotalAtual.snapshot.paramMap.get('id'));
+      const idParaEdicao = String(this.rotalAtual.snapshot.paramMap.get('id'));
 
       this.diariaService.pesquisarPorId(idParaEdicao).subscribe(
         diariaRetornada => this.diaria = diariaRetornada

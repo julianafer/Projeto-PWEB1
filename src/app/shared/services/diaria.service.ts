@@ -32,8 +32,14 @@ export class DiariaService {
   }
 
   pesquisarPorId(id: string): Observable<Diaria> {
-    return this.colecaoDiarias.doc(id).get().pipe(map(document => new Diaria(document.id, document.data())))
+    return this.colecaoDiarias.doc(id).get().pipe(
+      map(document => {
+        const data = document.data() as Diaria;
+        return { ...data, id };
+      })
+    );
   }
+  
 
   atualizar(diaria: Diaria): Observable<void> {
     const id = diaria.id;
