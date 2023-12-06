@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Usuario } from 'src/app/shared/modelo/usuario';
+import {Diaria } from 'src/app/shared/modelo/diaria';
 
 @Component({
     selector: 'app-login',
@@ -9,15 +9,15 @@ import { Usuario } from 'src/app/shared/modelo/usuario';
 export class LoginComponent {
     hide = true;
 
-    usuario: Usuario;
+    usuario: Diaria;
 
     constructor() {
-        this.usuario = new Usuario();
+        this.usuario = new Diaria();
     }
 
     check() {
-        if (this.usuario.user == '' || this.usuario.senha == '') {
-            alert('Você deixou algum campo em branco');
+        if (this.usuario.dataDia == '' || this.usuario.emocao == '') {
+            
         }
     }
 

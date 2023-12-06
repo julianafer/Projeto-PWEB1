@@ -4,6 +4,7 @@ import {DiariaService} from '../../shared/services/diaria.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { SnackBarComponent } from '../snack-bar/snack-bar.component';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -36,24 +37,18 @@ export class CadastroDiariaComponent implements OnInit {
   }
 
   inserirDiaria(): void {
-    if (this.diaria.id) {
-      this.diariaService.atualizar(this.diaria).subscribe(
-        diariaAlterado => {
-          this._snackBar.openFromComponent(SnackBarComponent, {
-            duration: this.durationInSeconds * 1000,
-          });
-        }
-      );
-    } else {
-      
-      this.diariaService.inserir(this.diaria).subscribe(
-        diariaInserida => {
-          this._snackBar.openFromComponent(SnackBarComponent, {
-            duration: this.durationInSeconds * 1000,
-          });
-        }
-      );
-      
-    }
+    const operacao = this.diaria.id ? 
+      this.diariaService.atualizar(this.diaria) as Observable<any> : 
+      this.diariaService.inserir(this.diaria) as Observable<any>;
+  
+    operacao.subscribe(
+      () => {
+        this._snackBar.openFromComponent(SnackBarComponent, {
+          duration: this.durationInSeconds * 1000,
+        });
+      }
+    );
   }
+  
+  
 }

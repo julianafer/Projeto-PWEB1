@@ -5,7 +5,6 @@
     align-items: center;
     align-content: center;
     justify-content: center;
-    background: rgb(223,198,240);
     background: linear-gradient(90deg, rgba(223,198,240,1) 0%, rgba(194,145,250,1) 30%, rgba(145,250,168,1) 100%);
 }
 

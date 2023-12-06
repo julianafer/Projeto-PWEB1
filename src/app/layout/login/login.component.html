@@ -7,11 +7,11 @@
         <mat-card-content class="content-login">
             <mat-form-field appearance="outline" class="field-login">
                 <mat-label>Usuário</mat-label>
-                <input matInput [(ngModel)]="usuario.user">
+                <input matInput [(ngModel)]="usuario.dataDia">
             </mat-form-field>
             <mat-form-field appearance="outline" class="field-login">
                 <mat-label>Senha</mat-label>
-                <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]="usuario.senha">
+                <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]="usuario.emocao">
                 <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                     <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                 </button>
